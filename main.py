@@ -55,7 +55,6 @@ def download_youtube_audio(url, output_path="/"):
             'ignoreerrors': True,
         }
 
-        # Download and convert to MP3
         with YoutubeDL(ydl_opts) as ydl:
             info = ydl.extract_info(url, download=True)
             if info:
